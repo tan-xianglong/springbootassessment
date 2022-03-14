@@ -1,5 +1,5 @@
 const createHTMLList = (index, title, description, date) => {
-  `
+  return `
   <tr>
     <td class="col-1">${title}</td>
     <td class="col-2">${description}</td>
@@ -43,7 +43,7 @@ class ListController {
     listController._items = [];
 
     fetch("http://127.0.0.1:8080/item/all")
-      .then(response => response,json())
+      .then(response => response.json())
       .then(data => {
         console.log('2. receive data');
         console.log(data);
@@ -56,7 +56,7 @@ class ListController {
             date: item.date
           };
           console.log(itemObj);
-          listController._items.push.apply(itemObj);
+          listController._items.push(itemObj);
 
         });
         listController.renderList();
@@ -72,10 +72,12 @@ class ListController {
     for (let i = 0; i<this._items.length; i++){
       const item = this._items[i];
       const taskHTML = createHTMLList(item.id, item.title, item.description, item.date);
+      console.log(taskHTML)
       taskHTMLList.push(taskHTML);
     }
 
     const pHTML = taskHTMLList.join();
+    console.log(pHTML);
     document.querySelector('tbody').innerHTML = pHTML;
   }
 
