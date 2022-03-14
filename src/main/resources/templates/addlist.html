@@ -19,7 +19,7 @@
   <div th:insert="fragments/navbar.html :: navbarDesktop"></div>
   <main>
     <h1>Add Task</h1>
-    <form id="newItemForm" onSubmit="event.preventDefault(); submitReservation();">
+    <form id="newItemForm" enctype="multipart/form-data">
       <fieldset>
         <p>
           <label for="title">Title</label>

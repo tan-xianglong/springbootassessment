@@ -3,9 +3,9 @@ const listControl = new ListController();
 newItemForm.addEventListener('submit', (event) => {
 
   event.preventDefault();
-  const newItemTitle = document.querySelector("#title");
-  const newItemDescription = document.querySelector("#description");
-  const newItemDate = document.querySelector("#targetdate");
+  let newItemTitle = document.querySelector("#title");
+  let newItemDescription = document.querySelector("#description");
+  let newItemDate = document.querySelector("#targetdate");
 
   const title = newItemTitle.value;
   const description = newItemDescription.value;
@@ -15,7 +15,7 @@ newItemForm.addEventListener('submit', (event) => {
   newItemDate = '';
   newItemDescription = '';
 
-  listControl.addItem(title, description, targetDate);
+  listControl.addTask(title, description, targetDate);
 
 
 });

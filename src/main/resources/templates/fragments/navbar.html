@@ -16,8 +16,8 @@
     </div>
     <div id="link-container-mobile">
       <ul>
-        <li><a href="#">To Do List</a></li>
-        <li><a href="#">Add New Task</a></li>
+        <li><a th:href="@{index}">To Do List</a></li>
+        <li><a th:href="@{addtask}">Add New Task</a></li>
       </ul>
     </div>
     <a href="javascript:void(0);" class="icon" onclick="navToggle()">
@@ -33,8 +33,8 @@
     </div>
     <div id="link-container-desktop">
       <ul class="flex">
-        <li><a href="#">To Do List</a></li>
-        <li><a href="#">Add New Task</a></li>
+        <li><a th:href="@{index}">To Do List</a></li>
+        <li><a th:href="@{addtask}">Add New Task</a></li>
         <li><button href="#" class="button-a">Log In</button></li>
       </ul>
     </div>
