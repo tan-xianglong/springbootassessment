@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  <nav class="navbar-mobile flex">
+  <nav class="navbar-mobile flex" th:fragment="navbarMobile">
     <div class="logo-container-mobile flex">
       <div class="image-container">
-        <img class="nav-logo" src="./images/logo.png" />
+        <i class="fa-solid fa-list-check"></i>
       </div>
       <p>HowNowBrownCow</p>
     </div>
@@ -24,10 +24,10 @@
       <i class="fa fa-bars"></i>
     </a>
   </nav>
-  <nav class="navbar-desktop flex">
+  <nav class="navbar-desktop flex" th:fragment="navbarDesktop">
     <div class="logo-container-desktop flex">
       <div class="image-container">
-        <img class="nav-logo" src="./images/logo.png" />
+        <i class="fa-solid fa-list-check"></i>
       </div>
       <p>HowNowBrownCow</p>
     </div>

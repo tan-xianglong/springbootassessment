@@ -122,6 +122,7 @@ header {
   top: 52.8px;
   padding: 1.5rem;
   background-color: #0dceda;
+  z-index: 1;
 }
 
 #link-container-mobile ul li {

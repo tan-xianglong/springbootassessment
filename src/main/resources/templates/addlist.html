@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head>
   <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,38 +15,8 @@
     <title>Add New Task</title>
 </head>
 <body>
-  <nav class="navbar-mobile flex">
-    <div class="logo-container-mobile flex">
-      <div class="image-container">
-        <i class="fa-solid fa-list-check"></i>
-      </div>
-      <p>HowNowBrownCow</p>
-    </div>
-    <div id="link-container-mobile">
-      <ul>
-        <li><a href="#">To Do List</a></li>
-        <li><a href="#">Add New Task</a></li>
-      </ul>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="navToggle()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </nav>
-  <nav class="navbar-desktop flex">
-    <div class="logo-container-desktop flex">
-      <div class="image-container">
-        <i class="fa-solid fa-list-check"></i>
-      </div>
-      <p>HowNowBrownCow</p>
-    </div>
-    <div id="link-container-desktop">
-      <ul class="flex">
-        <li><a href="#">To Do List</a></li>
-        <li><a href="#">Add New Task</a></li>
-        <li><button href="#" class="button-a">Log In</button></li>
-      </ul>
-    </div>
-  </nav>
+  <div th:insert="fragments/navbar.html :: navbarMobile"></div>
+  <div th:insert="fragments/navbar.html :: navbarDesktop"></div>
   <main>
     <h1>Add Task</h1>
     <form id="newItemForm" onSubmit="event.preventDefault(); submitReservation();">
