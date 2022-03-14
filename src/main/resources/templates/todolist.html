@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Signika+Negative:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>To Do List Homepage</title>
+</head>
+<body>
+  <nav class="navbar-mobile flex">
+    <div class="logo-container-mobile flex">
+      <div class="image-container">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <p>HowNowBrownCow</p>
+    </div>
+    <div id="link-container-mobile">
+      <ul>
+        <li><a href="#">To Do List</a></li>
+        <li><a href="#">Add New Task</a></li>
+      </ul>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="navToggle()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+  <nav class="navbar-desktop flex">
+    <div class="logo-container-desktop flex">
+      <div class="image-container">
+        <i class="fa-solid fa-list-check"></i>
+      </div>
+      <p>HowNowBrownCow</p>
+    </div>
+    <div id="link-container-desktop">
+      <ul class="flex">
+        <li><a href="#">To Do List</a></li>
+        <li><a href="#">Add New Task</a></li>
+        <li><button href="#" class="button-a">Log In</button></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <h1>TODO List</h1>
+    <table class="todo-table">
+      <thead>
+        <tr>
+          <th class="col-1">Title</th>
+          <th class="col-2">Description</th>
+          <th class="col-3">Target Date</th>
+          <!-- <th class="col-4">...</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- <td class="col-1">Run Errands</td>
+          <td class="col-2">To buy lunch and groceries</td>
+          <td class="col-3">30/03/2021</td>
+          <td class="col-4">
+              <a th:href="@{/delete_user(personId=${user.personId})}">
+                <i class="fa-solid fa-trash-can"></i>
+              </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="col-1">Run Errands</td>
+          <td class="col-2">To buy lunch and groceries</td>
+          <td class="col-3">30/03/2021</td>
+          <td class="col-4"><i class="fa-solid fa-trash-can"></i></td>
+        </tr> -->
+      </tbody>
+
+    </table>
+  </main>
+  
+  <script src="./js/script.js"></script>
+  <script src="./js/itemcontroller.js"></script>
+  <script src="./js/taskListing.js"></script>
+  <script src="https://kit.fontawesome.com/9dbc478fe2.js" crossorigin="anonymous"></script>
+</body>
+</html>
